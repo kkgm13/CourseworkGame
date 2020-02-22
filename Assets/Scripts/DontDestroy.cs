@@ -19,9 +19,8 @@ public class DontDestroy : MonoBehaviour
 
     void Awake(){
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
-        if(objs.Length > 1
-        // || SceneManager.GetSceneByName()
-        ){
+        Scene scene = SceneManager.GetActiveScene();
+        if(objs.Length > 1 || scene.buildIndex == 2){
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
