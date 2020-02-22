@@ -19,9 +19,22 @@ public class MenuController : MonoBehaviour
         
     }
 
+    void Awake(){;
+        Scene currentScene = SceneManager.GetActiveScene();
+        Debug.Log("Scene Name: " + currentScene.name);
+        Debug.Log("Scene Index: " + currentScene.name);
+        if(currentScene.buildIndex == 0) {
+            // Remove the custor locking state
+            Cursor.lockState = CursorLockMode.None;
+            // Make cursor visible once again
+            Cursor.visible = true;
+        }
+    }
+
     /* Head back to the Main Menu */
     public void ButtonHandlerMenu(){
         SceneManager.LoadSceneAsync(0);
+        Destroy(this.gameObject);
     }
     
     /* Head to Game based on Save State*/
@@ -32,6 +45,7 @@ public class MenuController : MonoBehaviour
     /*Head to Gamplay Scene */
     public void ButtonHandlerPlay(){
         SceneManager.LoadSceneAsync(2);
+        Destroy(this.gameObject);
     }
 
     /* Head to the Options Scene */

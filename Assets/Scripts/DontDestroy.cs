@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class DontDestroy : MonoBehaviour
 
     void Awake(){
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
-        if(objs.Length > 1){
+        if(objs.Length > 1
+        // || SceneManager.GetSceneByName()
+        ){
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
