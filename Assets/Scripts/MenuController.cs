@@ -20,9 +20,9 @@ public class MenuController : MonoBehaviour
     }
 
     void Awake(){;
+        // Get Active Scene
         Scene currentScene = SceneManager.GetActiveScene();
-        Debug.Log("Scene Name: " + currentScene.name);
-        Debug.Log("Scene Index: " + currentScene.name);
+        // If the Build Index is the Main Menu's Index
         if(currentScene.buildIndex == 0) {
             // Remove the custor locking state
             Cursor.lockState = CursorLockMode.None;
@@ -34,7 +34,6 @@ public class MenuController : MonoBehaviour
     /* Head back to the Main Menu */
     public void ButtonHandlerMenu(){
         SceneManager.LoadSceneAsync(0);
-        Destroy(this.gameObject);
     }
     
     /* Head to Game based on Save State*/
@@ -42,8 +41,19 @@ public class MenuController : MonoBehaviour
 
     }
 
-    /*Head to Gamplay Scene */
+    /* Head to Gamplay Scene */
     public void ButtonHandlerPlay(){
+        // Debug.Log(this.ToString());
+        // int countLoaded = SceneManager.sceneCount;
+        // Scene[] loaded = new Scene[countLoaded];
+
+        // for (int i = 0; i < countLoaded; i++){
+        //     loaded[i] = SceneManager.GetSceneAt(i);
+        //     Debug.Log(loaded[i].ToString());
+        // }
+
+        //
+
         SceneManager.LoadSceneAsync(2);
         Destroy(this.gameObject);
     }
@@ -58,10 +68,10 @@ public class MenuController : MonoBehaviour
     public void QuitGame(){
         // save any game data here
      #if UNITY_EDITOR
-         // Application.Quit() does not work in the editor so
          // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
          UnityEditor.EditorApplication.isPlaying = false;
      #else
+        // Application.Quit() Works on Build
          Application.Quit();
      #endif
     }
