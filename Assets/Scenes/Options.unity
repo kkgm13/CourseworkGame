@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: acb06d6cab1a14ab8a65828d44805e62, type: 2}
   mixerName: MasterVol
+  slider: {fileID: 283714320}
 --- !u!1 &299294109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: acb06d6cab1a14ab8a65828d44805e62, type: 2}
   mixerName: MusicVol
+  slider: {fileID: 1447169239}
 --- !u!1 &1469383972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: acb06d6cab1a14ab8a65828d44805e62, type: 2}
   mixerName: EffectVol
+  slider: {fileID: 1469383974}
 --- !u!1 &1575595641
 GameObject:
   m_ObjectHideFlags: 0

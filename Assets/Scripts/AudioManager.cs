@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         master = PlayerPrefs.GetFloat("MasterVol", masterSlide.value);
+        // Set the Mixer volume (as Log10)
         mixer.SetFloat("MasterVol", Mathf.Log(master) * 20);
 
         AdjustMusicVolume(master);
@@ -36,6 +37,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set the master as the new master slide 
         master = PlayerPrefs.GetFloat("MasterVol", masterSlide.value);
         // mixer.volume = masterSlide.value;
     }
