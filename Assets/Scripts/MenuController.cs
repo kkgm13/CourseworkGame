@@ -19,6 +19,7 @@ public class MenuController : MonoBehaviour
         
     }
 
+    
     void Awake(){;
         // Get Active Scene
         Scene currentScene = SceneManager.GetActiveScene();
@@ -43,24 +44,11 @@ public class MenuController : MonoBehaviour
 
     /* Head to Gamplay Scene */
     public void ButtonHandlerPlay(){
-        // Debug.Log(this.ToString());
-        // int countLoaded = SceneManager.sceneCount;
-        // Scene[] loaded = new Scene[countLoaded];
-
-        // for (int i = 0; i < countLoaded; i++){
-        //     loaded[i] = SceneManager.GetSceneAt(i);
-        //     Debug.Log(loaded[i].ToString());
-        // }
-
-        //
-
         SceneManager.LoadSceneAsync(2);
-        Destroy(this.gameObject);
     }
 
     /* Head to the Options Scene */
     public void ButtonHandlerOptions(){
-        // Async Add
 		SceneManager.LoadSceneAsync(1);
 	}
 
