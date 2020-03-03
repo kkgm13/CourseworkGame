@@ -21,6 +21,7 @@ AudioMixerController:
   - guids:
     - dcb62237749484ad194f7c9209406dee
     - 08deb4cf006ef4496a108e654c318abe
+    - d4fe5888c05a04d61884995c5d8458b3
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -35,6 +36,7 @@ AudioMixerGroupController:
   m_GroupID: dcb62237749484ad194f7c9209406dee
   m_Children:
   - {fileID: 243692424211897936}
+  - {fileID: 243664567911518856}
   m_Volume: fb61293ff7c2347b88613a9da2004a18
   m_Pitch: 3dc3e1b4594634d359e3d8c616a5508d
   m_Effects:
@@ -67,9 +69,28 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 4ca12c71500534737ae3088189d3308a
   m_FloatValues:
-    2d9bd5f03246f434895b6ae68701c552: 0
+    2d9bd5f03246f434895b6ae68701c552: -15
+    694e02ac95e694d39ba40e4e49e54cdc: -10.044283
     fb61293ff7c2347b88613a9da2004a18: 0
   m_TransitionOverrides: {}
+--- !u!243 &243664567911518856
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Coin Collect
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: d4fe5888c05a04d61884995c5d8458b3
+  m_Children: []
+  m_Volume: 694e02ac95e694d39ba40e4e49e54cdc
+  m_Pitch: 515fe09bcfb4444098598d695244cb49
+  m_Effects:
+  - {fileID: 244368388832112796}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &243692424211897936
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -88,6 +109,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &244368388832112796
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 62ef1ee224c1a4de889a4f72ab1e2f34
+  m_EffectName: Attenuation
+  m_MixLevel: 92e32fbc6047743c8a4aa70c3a06c0b4
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &244907375609876530
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
