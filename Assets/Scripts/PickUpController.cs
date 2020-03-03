@@ -19,6 +19,7 @@ public class PickUpController : MonoBehaviour
     void Start()
     {
         ScoreText.text = "Score: " + currentScore;
+
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class PickUpController : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(collider.tag == "Player"){
             collectSound.Play();
+            Debug.Log("Sound Effect Played? "+collectSound.isPlaying);
             currentScore += 10;
             ScoreText.text = "Score: " + currentScore;
             // Deleting without playing sound

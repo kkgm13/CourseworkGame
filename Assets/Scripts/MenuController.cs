@@ -24,7 +24,7 @@ public class MenuController : MonoBehaviour
         // Get Active Scene
         Scene currentScene = SceneManager.GetActiveScene();
         // If the Build Index is the Main Menu's Index
-        if(currentScene.buildIndex != 2) {
+        if(currentScene.buildIndex == 0) {
             // Remove the custor locking state
             Cursor.lockState = CursorLockMode.None;
             // Make cursor visible once again
