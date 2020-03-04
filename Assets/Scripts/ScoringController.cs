@@ -8,6 +8,10 @@ public class ScoringController : MonoBehaviour
     public GameObject scoreText;
     public static int currentScore;
 
+    void Start(){
+        currentScore = 0;
+    }
+
     // Update is called once per frame
     void Update()
     { 

@@ -21,20 +21,18 @@ public class GamePauseController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)){
             // If true to both
             if(canvas.gameObject.activeInHierarchy || isPaused != false){
-                Time.timeScale = 1.0f; //  Stop Clock
+                Time.timeScale = 1.0f; //  Stop Clock FULLY
                 canvas.gameObject.SetActive(false);
                 // Hide Cursor
-                // Cursor.lockState = CursorLockMode.Confined;
-                // Cursor.visible = false;
-                 Cursor.visible = false;
-                 Screen.lockCursor = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = false;
+                Screen.lockCursor = true;
                 isPaused = false;
             } else {
-                Time.timeScale = 0.0f; //  Start Clock
+                Time.timeScale = 0.0f; //  Start Clock Real Time
                 canvas.gameObject.SetActive(true);
-                // SHow Cursor
-                // Cursor.lockState = CursorLockMode.None;
-                // Cursor.visible = true;
+                // Show Cursor
+                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Screen.lockCursor = false;
                 isPaused = true;
@@ -43,10 +41,9 @@ public class GamePauseController : MonoBehaviour
     }
 
     void Resume(){
-        Time.timeScale = 1.0f; //  Resume Clock time
+        Time.timeScale = 1.0f; //  Resume Real Clock time
         canvas.gameObject.SetActive(false);
-        // Cursor.lockState = CursorLockMode.Confined;
-        // Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         Screen.lockCursor = true;
         isPaused = false;
