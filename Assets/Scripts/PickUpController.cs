@@ -7,20 +7,7 @@ using UnityEngine.Audio;
 public class PickUpController : MonoBehaviour
 {
     public int degrees;
-    public Text ScoreText;
-    private int currentScore = 0;
     public AudioSource collectSound;
-
-    void Awake(){
-        collectSound = GetComponent<AudioSource>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        ScoreText.text = "Score: " + currentScore;
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -31,12 +18,13 @@ public class PickUpController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider){
         if(collider.tag == "Player"){
+            Debug.Log("Sound Has Played? "+collectSound.isPlaying);
             collectSound.Play();
-            Debug.Log("Sound Effect Played? "+collectSound.isPlaying);
-            currentScore += 10;
-            ScoreText.text = "Score: " + currentScore;
+            Debug.Log("Sound Has Played? "+collectSound.isPlaying);
+
+            ScoringController.currentScore += 10;
             // Deleting without playing sound
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

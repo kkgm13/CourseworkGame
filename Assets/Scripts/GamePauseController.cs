@@ -19,8 +19,6 @@ public class GamePauseController : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)){
-            Debug.Log(canvas.gameObject.activeInHierarchy);
-            Debug.Log(isPaused);
             // If true to both
             if(canvas.gameObject.activeInHierarchy || isPaused != false){
                 Time.timeScale = 1.0f; //  Stop Clock
