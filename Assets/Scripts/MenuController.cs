@@ -20,6 +20,33 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    /* Currently testing Single menu handler system */
+    public void menuHandler(int sceneNum){
+        switch (sceneNum)
+        {
+            case 0:
+                SceneManager.LoadSceneAsync(0);
+                break;
+            case 1:
+                SceneManager.LoadSceneAsync(1);
+                break;
+            case 2:
+                SceneManager.LoadSceneAsync(2);
+                break;
+            case -1:
+                #if UNITY_EDITOR
+                    // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+                    UnityEditor.EditorApplication.isPlaying = false;
+                #else
+                    // Application.Quit() Works on Build
+                    Application.Quit();
+                #endif
+                break;
+            default:
+                break;
+        }
+    }
+
     /* Head back to the Main Menu */
     public void ButtonHandlerMenu(){
         SceneManager.LoadSceneAsync(0);
