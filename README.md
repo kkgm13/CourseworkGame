@@ -1,10 +1,8 @@
 # CS3450 Games Development
 This is the coursework repository for Games Development.
 
-## 
-
 ## Unity Version Utilized
-Unity3D 2018.3.0 (University provides 2018.2.18)
+Unity3D 2018.3.0 (University provides 2018.2.18 / Lax with 2019.3)
 - Utilized due to macOS issue with Overall Audio Utilization.
 
 ## Packages Utilized
@@ -12,4 +10,3 @@ Unity3D 2018.3.0 (University provides 2018.2.18)
 - [Unity Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351)
 - [Nature Starter Kit 2](https://assetstore.unity.com/packages/3d/environments/nature-starter-kit-2-52977)
 - [Space Robot Kyle](https://assetstore.unity.com/packages/3d/characters/robots/space-robot-kyle-4696)
-
