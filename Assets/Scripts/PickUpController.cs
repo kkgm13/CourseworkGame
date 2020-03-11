@@ -25,11 +25,7 @@ public class PickUpController : MonoBehaviour
             collectSound.Play();
             ScoringController.currentScore += 10;
             // Deleting without playing sound
-            Destroy(gameObject, collectSound.clip.length); // ISSUE: Destroying game object disables the coins audio
+            Destroy(gameObject, collectSound.clip.length); // Delay overloads required to play sounds
         }
-    }
-
-    void PlaySound(){
-        collectSound.Play();
     }
 }
