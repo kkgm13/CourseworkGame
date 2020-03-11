@@ -9,6 +9,10 @@ public class PickUpController : MonoBehaviour
     public int degrees;
     public AudioSource collectSound;
 
+    void Awake(){
+        collectSound = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -17,11 +21,15 @@ public class PickUpController : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider collider){
-        collectSound.Play();
         if(collider.tag == "Player"){
+            collectSound.Play();
             ScoringController.currentScore += 10;
             // Deleting without playing sound
-            // Destroy(gameObject); // ISSUE: Destroying game object disables the coins audio
+            Destroy(gameObject, collectSound.clip.length); // ISSUE: Destroying game object disables the coins audio
         }
+    }
+
+    void PlaySound(){
+        collectSound.Play();
     }
 }

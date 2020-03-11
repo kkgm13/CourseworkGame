@@ -4810,7 +4810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   degrees: 25
-  collectSound: {fileID: 8003357196405533916}
+  collectSound: {fileID: 0}
 --- !u!199 &1704814377984023842
 ParticleSystemRenderer:
   serializedVersion: 6
