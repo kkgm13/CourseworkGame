@@ -97,18 +97,18 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.25
-    agentHeight: 2
-    agentSlope: 20
-    agentClimb: 2
+    agentRadius: 0.5
+    agentHeight: 3
+    agentSlope: 25
+    agentClimb: 3
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.083333336
+    cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: e8701cb4d20354142b7a66d4b21e21de, type: 2}
@@ -2170,7 +2170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &863934030
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -4332,7 +4332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &1612023888
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -5045,6 +5045,7 @@ GameObject:
   - component: {fileID: 1823992073}
   - component: {fileID: 1823992072}
   - component: {fileID: 1823992071}
+  - component: {fileID: 1823992074}
   m_Layer: 8
   m_Name: WaterArea
   m_TagString: Untagged
@@ -5096,6 +5097,20 @@ Transform:
   m_Father: {fileID: 603713591}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 10, z: 0}
+--- !u!136 &1823992074
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823992070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1825569534
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,22 +5156,22 @@ PrefabInstance:
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 158
+      value: 158.38
       objectReference: {fileID: 0}
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 125.37
+      value: 125.304
       objectReference: {fileID: 0}
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.06975647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
@@ -5171,7 +5186,7 @@ PrefabInstance:
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9975641
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
@@ -5181,7 +5196,7 @@ PrefabInstance:
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192671471641875657, guid: 60e6943480ff3436ea0887751698f7e2,
         type: 3}
@@ -5463,7 +5478,7 @@ PrefabInstance:
     - target: {fileID: 5361475866550474807, guid: e84ca0bf87c7e4ad5ac85a44d20c3a8a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5361475866550474807, guid: e84ca0bf87c7e4ad5ac85a44d20c3a8a,
         type: 3}
