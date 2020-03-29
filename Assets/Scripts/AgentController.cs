@@ -11,12 +11,11 @@ public class AgentController : MonoBehaviour
 		WalkAround,
 		Chasing
 	}
-    public AgentState state; 
-
+    public AgentState state;
     // All waypoint information
     public Transform[] waypoints;
     // Starting WayPoint ID (Custom for each Agent)
-    public int waypointID;
+    public int waypointID = 0;
     // Get the distance to next point
     public float distanceToStartHeadingToNextWaypoint = 1;
     // Target Object
@@ -27,14 +26,6 @@ public class AgentController : MonoBehaviour
     private Animator animController;
     // Hashed Walking Speed ID
     private int walkSpeedID;
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     void Awake(){
         walkSpeedID = Animator.StringToHash("walkingSpeed");
