@@ -786,7 +786,7 @@ MonoBehaviour:
   - {fileID: 317175464}
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
-  distanceToStartChasingTarget: 15
+  distanceToStartChasingTarget: 2
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
@@ -5300,7 +5300,7 @@ MonoBehaviour:
   - {fileID: 317175464}
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
-  distanceToStartChasingTarget: 15
+  distanceToStartChasingTarget: 2
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
@@ -7035,7 +7035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!154 &1612023888
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -9011,7 +9011,7 @@ MonoBehaviour:
   - {fileID: 317175464}
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
-  distanceToStartChasingTarget: 15
+  distanceToStartChasingTarget: 2
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
@@ -9134,7 +9134,7 @@ MonoBehaviour:
   - {fileID: 317175464}
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
-  distanceToStartChasingTarget: 15
+  distanceToStartChasingTarget: 2
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
