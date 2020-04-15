@@ -14,3 +14,4 @@ Unity3D 2018.3.0 (University provides 2018.2.18 / Lax with 2019.3)
 ## External Research
 - [Post-Processing for Underwater - Romi Fauzi](https://www.youtube.com/watch?v=zmDDR9mOVTs)
 - [Collectable Scoring System - Jimmy Vegas](https://www.youtube.com/watch?v=D0lx90n0s-4)
+- [PlayerPref State Saving/Loading - Jimmy Vegas](https://www.youtube.com/watch?v=iT3qKE-6c00)
