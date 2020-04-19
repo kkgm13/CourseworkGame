@@ -20,12 +20,16 @@ public class AgentController : MonoBehaviour
     private Animator animController;
     // Hashed Walking Speed ID
     private int walkSpeedID;
+    // Hashed Attack Target ID
+    private int attackID;
     // Starting WayPoint ID (Custom for each Agent)
     private int waypointID = 0;
     // Get the distance to next point
     public float distanceToStartHeadingToNextWaypoint = 1;
     // Get the distance to chase target
     public float distanceToStartChasingTarget = 15.0f;
+    // Get distance to start attacking
+    public float distanceToStartAttackTarget = 2.0f;
     // Time since last seen the target
     private float timeSinceLastSeenTarget = float.PositiveInfinity;
     // time since last seen 
@@ -39,6 +43,7 @@ public class AgentController : MonoBehaviour
 
     void Awake(){
         walkSpeedID = Animator.StringToHash("walkingSpeed");
+        attackID = Animator.StringToHash("attackTarget");
         navMeshAgent = GetComponent<NavMeshAgent>();
         animController = GetComponent<Animator>();
 
@@ -84,7 +89,7 @@ public class AgentController : MonoBehaviour
 
     void Chase(){
         navMeshAgent.stoppingDistance = 1.5f;
-
+        Attack();
         navMeshAgent.SetDestination(target.position);
         timePursuingTarget += Time.deltaTime;
 
@@ -137,4 +142,14 @@ public class AgentController : MonoBehaviour
 		float actualAngle = Vector3.Angle(planarDiff, transform.forward);
 		return actualAngle <= angle;
 	}
+
+    private bool ShouldAttack(){
+        return RemainingDistance() < distanceToStartAttackTarget && timeSinceLastSeenTarget <= timePursuingTarget && TargetWithinAngle(45);
+    }
+
+    void Attack(){
+        if(ShouldAttack()){
+            animController.SetTrigger(attackID);
+        }
+    }
 }

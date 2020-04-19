@@ -831,6 +831,7 @@ MonoBehaviour:
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
   distanceToStartChasingTarget: 2
+  distanceToStartAttackTarget: 1.5
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
@@ -1607,6 +1608,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414695493}
   m_CullTransparentMesh: 0
+--- !u!1 &442006276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 771327017, guid: 21d7a4de014df4f948fd6c041020dee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 46381722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &442006281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442006276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d1fa6b58d724eccadbd1543bd6ae3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAudio: {fileID: 8300000, guid: 0bbf6d8250ea04ed2b6c9e0aeb834178, type: 3}
+  GameOverCanvas: {fileID: 741757312}
 --- !u!1 &485939729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,6 +5454,7 @@ MonoBehaviour:
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
   distanceToStartChasingTarget: 2
+  distanceToStartAttackTarget: 1.5
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
@@ -9222,6 +9244,7 @@ MonoBehaviour:
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
   distanceToStartChasingTarget: 2
+  distanceToStartAttackTarget: 1.5
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
@@ -9317,7 +9340,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e851afab9abaf4661a24e53d30ee1264, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 396215469395664794, guid: 0e4eb3bb1d7cc4025882fa9aa8e17088,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 396215469395664794, guid: 0e4eb3bb1d7cc4025882fa9aa8e17088,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3592751675160414254, guid: 0e4eb3bb1d7cc4025882fa9aa8e17088, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0e4eb3bb1d7cc4025882fa9aa8e17088, type: 3}
 --- !u!1 &3038320558558837273 stripped
 GameObject:
@@ -9345,6 +9379,7 @@ MonoBehaviour:
   - {fileID: 1825569535}
   distanceToStartHeadingToNextWaypoint: 1
   distanceToStartChasingTarget: 2
+  distanceToStartAttackTarget: 1.5
   target: {fileID: 1054108112}
   rotationSpeed: 2
   timePursuingTarget: 10
