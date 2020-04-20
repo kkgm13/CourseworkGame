@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99867944}
   - component: {fileID: 99867943}
+  - component: {fileID: 99867945}
   m_Layer: 0
   m_Name: SaveCollider2
   m_TagString: Untagged
@@ -247,6 +248,26 @@ Transform:
   m_Father: {fileID: 1288810066}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &99867945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99867942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b26bee6285f4023b785b61f4605f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 442006276}
+  xPos: 0
+  yPos: 0
+  zPos: 0
+  xRot: 0
+  yRot: 0
+  zRot: 0
+  coinStash: {fileID: 0}
 --- !u!1 &107721287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 532180940}
   - component: {fileID: 532180941}
+  - component: {fileID: 532180942}
   m_Layer: 0
   m_Name: SaveCollider4
   m_TagString: Untagged
@@ -1859,6 +1881,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 490, y: 100, z: 30}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &532180942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532180939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b26bee6285f4023b785b61f4605f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 442006276}
+  xPos: 0
+  yPos: 0
+  zPos: 0
+  xRot: 0
+  yRot: 0
+  zRot: 0
+  coinStash: {fileID: 0}
 --- !u!1001 &559242486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2168,7 +2210,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 585063278}
   m_OnClick:
     m_PersistentCalls:
@@ -5292,6 +5334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1245725830}
   - component: {fileID: 1245725829}
+  - component: {fileID: 1245725831}
   m_Layer: 0
   m_Name: SaveCollider1
   m_TagString: Untagged
@@ -5326,6 +5369,26 @@ Transform:
   m_Father: {fileID: 1288810066}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 3, z: 0}
+--- !u!114 &1245725831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245725828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b26bee6285f4023b785b61f4605f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 442006276}
+  xPos: 0
+  yPos: 0
+  zPos: 0
+  xRot: 0
+  yRot: 0
+  zRot: 0
+  coinStash: {fileID: 131648646}
 --- !u!1001 &1246357721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6702,6 +6765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535831548}
   - component: {fileID: 1535831549}
+  - component: {fileID: 1535831550}
   m_Layer: 0
   m_Name: SaveCollider3
   m_TagString: Untagged
@@ -6736,6 +6800,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 490, y: 100, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1535831550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535831547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b26bee6285f4023b785b61f4605f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 442006276}
+  xPos: 0
+  yPos: 0
+  zPos: 0
+  xRot: 0
+  yRot: 0
+  zRot: 0
+  coinStash: {fileID: 0}
 --- !u!1001 &1544221291
 PrefabInstance:
   m_ObjectHideFlags: 0
