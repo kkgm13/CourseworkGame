@@ -3178,7 +3178,7 @@ GameObject:
   - component: {fileID: 828270540}
   - component: {fileID: 828270539}
   - component: {fileID: 828270543}
-  - component: {fileID: 828270544}
+  - component: {fileID: 828270545}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -3281,7 +3281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc07bf0c43eee4a35aaae4adeccef53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &828270544
+--- !u!114 &828270545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3290,10 +3290,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 828270538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5951a56da4c542b5b9a0078d81f3e32, type: 3}
+  m_Script: {fileID: 11500000, guid: aed7f97e96ba84f09bf904517b912925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1423489934}
+  scoreText: {fileID: 1059482053}
 --- !u!1 &830440133
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,6 +4233,50 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1026112318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026112320}
+  - component: {fileID: 1026112319}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1026112319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026112318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ff767e66fa340ffa5472a0e5366a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1054108112}
+--- !u!4 &1026112320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026112318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 311.5, y: 213, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1032435879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,7 +4931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1112540690
 RectTransform:
   m_ObjectHideFlags: 0

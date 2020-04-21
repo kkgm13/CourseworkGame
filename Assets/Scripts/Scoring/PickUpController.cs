@@ -23,7 +23,7 @@ public class PickUpController : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(collider.tag == "Player"){
             collectSound.Play();
-            ScoringController.currentScore += 10;
+            UIManager.Instance.UpdateScore();
             // Deleting without playing sound
             Destroy(gameObject, collectSound.clip.length); // Delay overloads required to play sounds
         }
