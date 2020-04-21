@@ -945,8 +945,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01, y: 0.003}
-  m_SizeDelta: {x: 75.3073, y: 24.9999}
+  m_AnchoredPosition: {x: -0.0329, y: 0.0017}
+  m_SizeDelta: {x: 83.8839, y: 36.3437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &378330423
 MonoBehaviour:
@@ -975,13 +975,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 47
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: If you see any red enemies, RUN from their sight!
+  m_Text: Run from Red Enemy's Sight
 --- !u!222 &378330424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1775,7 +1775,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639951417}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 7.639}
+  m_LocalPosition: {x: 0, y: 0, z: 7.597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1808681620}
@@ -1784,7 +1784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.733, y: -0.4749999}
+  m_AnchoredPosition: {x: -2.527, y: -0.4749999}
   m_SizeDelta: {x: 1, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &650626143
@@ -3277,8 +3277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1234, y: 0.003}
-  m_SizeDelta: {x: 75.3073, y: 24.9999}
+  m_AnchoredPosition: {x: 0.0887, y: 0.0014}
+  m_SizeDelta: {x: 77.5965, y: 44.0934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216738419
 MonoBehaviour:
@@ -3302,10 +3302,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 0
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 0
+    m_MinSize: 10
     m_MaxSize: 47
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4033,8 +4033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1234, y: 0.003}
-  m_SizeDelta: {x: 75.3073, y: 24.9999}
+  m_AnchoredPosition: {x: 0.1062, y: 0.0037}
+  m_SizeDelta: {x: 78.7435, y: 32.0376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360096310
 MonoBehaviour:
@@ -4245,20 +4245,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 170438144}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1443739591
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443739588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.9
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!195 &1443739592
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4299,6 +4285,7 @@ MonoBehaviour:
   - {fileID: 384074259}
   distanceToStartHeadingToNextWaypoint: 1
   distanceToStartChasingTarget: 15
+  distanceToStartAttackTarget: 2
   target: {fileID: 1098018563}
   rotationSpeed: 2
   timePursuingTarget: 10
@@ -6484,7 +6471,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'This red only runs in a line.
 
-    They will chase you down when they see you'
+    They will chase you down when they see you.
+
+    Get Hit by them, GAME OVER for you.'
 --- !u!222 &2039659308
 CanvasRenderer:
   m_ObjectHideFlags: 0
