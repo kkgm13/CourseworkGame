@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TeleporterController : MonoBehaviour
 {
+    public int sceneNum;
+    
     void OnTriggerEnter(Collider collider){
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(sceneNum);
     }
 }

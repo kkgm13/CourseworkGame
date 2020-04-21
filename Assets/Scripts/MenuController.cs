@@ -7,12 +7,11 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
 
-    
     void Awake(){;
         // Get Active Scene
         Scene currentScene = SceneManager.GetActiveScene();
         // If the Build Index is the Main Menu's Index
-        if(currentScene.buildIndex == 0) {
+        if(currentScene.buildIndex != 3 && currentScene.buildIndex != 2) {
             // Remove the custor locking state
             Cursor.lockState = CursorLockMode.None;
             // Make cursor visible once again
@@ -57,9 +56,14 @@ public class MenuController : MonoBehaviour
 
     }
 
-    /* Head to Gamplay Scene */
-    public void ButtonHandlerPlay(){
+    /* Head to Tutorial Scene */
+    public void ButtonHandlerTutorial(){
         SceneManager.LoadSceneAsync(2);
+    }
+
+    /* Head to Gameplay Scene*/
+    public void ButtonHandlerPlay(){
+        SceneManager.LoadSceneAsync(3);
     }
 
     /* Head to the Options Scene */

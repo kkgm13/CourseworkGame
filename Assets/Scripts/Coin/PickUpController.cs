@@ -6,24 +6,19 @@ using UnityEngine.Audio;
 
 public class PickUpController : MonoBehaviour
 {
-    public int degrees;
+    // public int degrees;
     public AudioSource collectSound;
+    public int scorePoints;
 
     void Awake(){
         collectSound = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Rotate Coin Around
-        transform.Rotate(0,degrees*Time.deltaTime,0);
-    }
-
     void OnTriggerEnter(Collider collider){
         if(collider.tag == "Player"){
             collectSound.Play(); // Play Audio
-            ScoringController.currentScore += 10;
+            // ScoringController.currentScore += 10;
+            UIController.currentScore += scorePoints;
             Destroy(gameObject, (collectSound.clip.length/12)); // Delay overloads required to play sounds
         }
     }

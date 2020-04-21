@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6435111318836716550}
   - component: {fileID: 8003357196405533916}
   - component: {fileID: 515167507112299020}
-  - component: {fileID: 2558896071158723134}
+  - component: {fileID: 7767648242592247272}
+  - component: {fileID: 894370920577085402}
   - component: {fileID: 1704814377984023842}
   m_Layer: 0
   m_Name: CoinPickup
@@ -4797,7 +4798,20 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &2558896071158723134
+--- !u!114 &7767648242592247272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401605924750365557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4d6e3fa4c7745e2b5c60e421568f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degrees: 25
+--- !u!114 &894370920577085402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4809,7 +4823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747e5b6fecca74fb6914e3390583ec74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degrees: 25
+  degrees: 0
   collectSound: {fileID: 0}
 --- !u!199 &1704814377984023842
 ParticleSystemRenderer:

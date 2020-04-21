@@ -9,7 +9,7 @@ public class TimerController : MonoBehaviour
     private Text timeText;
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         float time = Time.timeSinceLevelLoad;
         // int hour = (int) ; // Hour???

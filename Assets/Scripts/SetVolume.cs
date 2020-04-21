@@ -8,7 +8,6 @@ public class SetVolume : MonoBehaviour
 {
     public AudioMixer mixer;
     public string mixerName;
-
     public Slider slider;
 
     public void SetLevel(float sliderVal){
@@ -30,6 +29,11 @@ public class SetVolume : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        mixer.SetFloat("MasterVol", Mathf.Log10(PlayerPrefs.GetFloat("MasterVol")) * 20);
+        mixer.SetFloat("MusicVol", Mathf.Log10(PlayerPrefs.GetFloat("MusicVol")) * 20);
+        mixer.SetFloat("EffectVol", Mathf.Log10(PlayerPrefs.GetFloat("EffectVol")) * 20);
+
         // Set the Slider value based on the PlayerPref Information
         slider.value = PlayerPrefs.GetFloat(mixerName);
     }
