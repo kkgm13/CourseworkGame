@@ -11,10 +11,10 @@ public class HighScoreResult
     public string message;
 }
 
-public class RemoteHighScoreManager : MonoBehaviour
+public class RemoteScoreManager : MonoBehaviour
 {
 
-    public static RemoteHighScoreManager Instance { get; private set; }
+    public static RemoteScoreManager Instance { get; private set; }
 
     void Awake()
     {
@@ -28,6 +28,7 @@ public class RemoteHighScoreManager : MonoBehaviour
     public IEnumerator GetHighScoreBKD(Action<int> onCompleteCallback)
     {
         string url = "https://api.backendless.com/"+Globals.APP_ID+"/"+Globals.REST_ID+"/data/DataBase";
+        Debug.Log("YES");
         UnityWebRequest webreq = UnityWebRequest.Get(url);
         webreq.SetRequestHeader("application-id", Globals.APP_ID);
         webreq.SetRequestHeader("secret-key", Globals.REST_ID);
@@ -48,6 +49,7 @@ public class RemoteHighScoreManager : MonoBehaviour
     public IEnumerator SetHighScoreBKD(int score, Action onCompleteCallback)
     {
         string url = "https://api.backendless.com/"+Globals.APP_ID+"/"+Globals.REST_ID+"/data/DataBase";
+        Debug.Log("YES");
         string data = JsonUtility.ToJson(new HighScoreResult { Score = score });
         UnityWebRequest webreq = UnityWebRequest.Put(url, data);
         webreq.SetRequestHeader("Content-Type", "application/json");

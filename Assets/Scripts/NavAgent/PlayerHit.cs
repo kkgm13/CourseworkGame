@@ -18,15 +18,32 @@ public class PlayerHit : MonoBehaviour
     public void GameOver(){
         audio.PlayOneShot(deathAudio);
         SaveScorePlayerPref();
+        // StartCoroutine(RemoteScoreManager.Instance.GetHighScoreBKD(GetHighScoreCompleted));
+        SceneManager.LoadSceneAsync(4);
+    }
+
+    private int GetPlayedScore(){
+        string score = Regex.Match(scoreText.text, @"\d+").Value;
+        return int.Parse(score);
+    }
+
+    void GetHighScoreCompleted(int highScore){
+        if(GetPlayedScore() > highScore){
+            StartCoroutine(RemoteScoreManager.Instance.SetHighScoreBKD(GetPlayedScore(), SetHighScoreCompleted));
+        } else {
+            SceneManager.LoadSceneAsync(4);
+        }
+    }
+
+    void SetHighScoreCompleted(){
         SceneManager.LoadSceneAsync(4);
     }
 
     private void SaveScorePlayerPref(){
-        string score = Regex.Match(scoreText.text, @"\d+").Value;
-        // score = int.Parse(score);
-        if(int.Parse(score) > PlayerPrefs.GetInt("TopScore") || ! PlayerPrefs.HasKey("TopScore")){
-            PlayerPrefs.SetInt("TopScore", int.Parse(score));
+        if(GetPlayedScore() > PlayerPrefs.GetInt("TopScore") || ! PlayerPrefs.HasKey("TopScore")){
+            PlayerPrefs.SetInt("TopScore", GetPlayedScore());
             PlayerPrefs.Save();
         }
+        SetHighScoreCompleted();
     }
 }
