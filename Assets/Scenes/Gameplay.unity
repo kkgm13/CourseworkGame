@@ -8618,7 +8618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e241454c0e844600b680bd6190fc6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 2
+  state: 1
   waypoints:
   - {fileID: 332284850}
   - {fileID: 70166520}
@@ -9224,7 +9224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e241454c0e844600b680bd6190fc6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 2
+  state: 1
   waypoints:
   - {fileID: 389597337}
   - {fileID: 1651976510}
