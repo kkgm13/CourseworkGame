@@ -8,7 +8,6 @@ public class UIController : MonoBehaviour
 
     [SerializeField]
     public Text timeText;
-
     public GameObject scoreText;
     public static int currentScore;
     

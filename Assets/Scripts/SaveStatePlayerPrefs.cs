@@ -8,14 +8,13 @@ public class SaveStatePlayerPrefs : MonoBehaviour
     public GameObject thePlayer;
     public float xPos, yPos, zPos;
     public float xRot, yRot, zRot;
-    public GameObject coinStash;
 
     // Start is called before the first frame update
     void Start(){
         xPos = PlayerPrefs.GetFloat("PlXPos"); 
         yPos = PlayerPrefs.GetFloat("PlYPos"); 
         zPos = PlayerPrefs.GetFloat("PlZPos");
-        thePlayer.transform.position = new Vector3(xPos, yPos, zPos);
+        thePlayer.transform.position = new Vector3(xPos, yPos, zPos); // Weird Jumping Error Occurs and resets back at origin spawn
     }
 
     // Update is called once per frame
@@ -29,7 +28,6 @@ public class SaveStatePlayerPrefs : MonoBehaviour
         PlayerPrefs.SetFloat("PlXPos", xPos);
         PlayerPrefs.SetFloat("PlYPos", yPos);
         PlayerPrefs.SetFloat("PlZPos", zPos);
-
         print("Saved");
     }
 }

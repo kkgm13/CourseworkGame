@@ -14,12 +14,4 @@ public class LaunchPlayerPrefs : MonoBehaviour
         mixer.SetFloat("MusicVol", Mathf.Log10(PlayerPrefs.GetFloat("MusicVol")) * 20);
         mixer.SetFloat("EffectVol", Mathf.Log10(PlayerPrefs.GetFloat("EffectVol")) * 20);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    
 }
